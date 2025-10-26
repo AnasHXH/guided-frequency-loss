@@ -1,1 +1,67 @@
+# Configuration for SwinIR Super-Resolution with GFL
 
+# Random seed for reproducibility
+seed: 42
+
+# Model configuration
+model:
+  type: swinir
+  upscale: 4
+  in_chans: 3
+  img_size: 48  # LR image size (192 // 4)
+  window_size: 8
+  img_range: 1.0
+  depths: [6, 6, 6, 6, 6, 6]
+  embed_dim: 180
+  num_heads: [6, 6, 6, 6, 6, 6]
+  mlp_ratio: 2
+  upsampler: 'pixelshuffle'
+  resi_connection: '1conv'
+
+# Loss function configuration
+loss:
+  start_frequency: 10
+  end_frequency: 255
+  num_epochs: 100
+  filter_apply: false
+  eps: 0.001
+  kernel_size: 5
+  sigma: 1.0
+
+# Data configuration
+data:
+  train_dir: '/path/to/train/dataset'
+  val_dir: null  # If null, will split from train_dir
+  test_dir: '/path/to/test/dataset'
+  hr_size: [192, 192]
+  upscale_factor: 4
+  batch_size: 8
+  num_workers: 4
+  train_split: 0.95  # Used if val_dir is null
+  augmentation: true
+
+# Optimizer configuration
+optimizer:
+  type: 'adam'
+  lr: 0.0002
+  weight_decay: 0
+  betas: [0.9, 0.999]
+
+# Learning rate scheduler configuration
+scheduler:
+  type: 'reduce_on_plateau'
+  factor: 0.2
+  patience: 5
+  min_lr: 0.00005
+
+# Training configuration
+training:
+  num_epochs: 100
+  checkpoint_dir: 'checkpoints/swinir_sr_x4'
+  log_dir: 'logs'
+  experiment_name: 'swinir_sr_x4_gfl'
+  log_every_n_steps: 50
+  val_check_interval: 1.0
+  gradient_clip_val: 0
+  accumulate_grad_batches: 1
+  early_stopping_patience: 20
