@@ -137,11 +137,9 @@ python scripts/train.py \
 
 ### Super-Resolution Performance
 
-| Model | Dataset | PSNR (dB) | SSIM |
-|-------|---------|-----------|------|
-| SwinIR + GFL | DIV2K | 24.54 | 0.761 |
-| SwinIR Baseline | DIV2K | 23.12 | 0.742 |
-| SRGAN + GFL | BSD100 | 25.89 | 0.783 |
+<p align="center">
+  <img src="https://github.com/AnasHXH/guided-frequency-loss/blob/main/Results_2.png" alt="Original • Noisy • Denoised dermoscopic image" width="900">
+</p>
 
 ### Training Stability
 
@@ -181,14 +179,6 @@ If you find this work useful in your research, please consider citing:
 
 ## 🛠️ Requirements
 
-- Python >= 3.8
-- PyTorch >= 1.9.0
-- PyTorch Lightning >= 1.5.0
-- torchvision >= 0.10.0
-- numpy
-- PIL
-- matplotlib
-- tqdm
 
 See `requirements.txt` for full dependencies.
 
@@ -201,12 +191,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - SwinIR architecture based on [SwinIR: Image Restoration Using Swin Transformer](https://arxiv.org/abs/2108.10257)
 - Inspired by frequency-domain analysis techniques in image processing
 
-## 📧 Contact
 
-For questions and discussions, please open an issue or contact [your.email@example.com]
-
-## 🔗 Links
-
-- [Paper](link-to-paper)
-- [Project Page](link-to-project-page)
-- [Documentation](link-to-docs)
