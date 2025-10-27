@@ -35,6 +35,13 @@ cd guided-frequency-loss
 # Install dependencies
 pip install -r requirements.txt
 ```
+### Quick Demo – Try GFL in One Notebook
+If you want to quickly test the Guided Frequency Loss (GFL) without installing the full project, we provide an interactive demo notebook.
+
+You can open and run it directly:
+    Demo Notebook: guided-frequency-loss/notebooks/GFL_loss_demo_tutorial_Generic.ipynb  [![GFL_loss_demo_tutorial_Generic.ipynb ](https://github.com/AnasHXH/guided-frequency-loss/blob/main/notebooks/GFL_loss_demo_tutorial_Generic.ipynb)](https://github.com/AnasHXH/guided-frequency-loss/blob/main/notebooks/GFL_loss_demo_tutorial_Generic.ipynb)
+
+    GFL_loss_demo_tutorial_Generic.ipynb
 
 ### Basic Usage
 
