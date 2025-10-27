@@ -170,11 +170,16 @@ If you find this work useful in your research, please consider citing:
 
 ```bibtex
 @article{gfl2024,
-  title={Guided Frequency Loss for Image Restoration},
-  author={Your Name},
+  title={Guided Frequency Loss for Multimedia Image Enhancement and Restoration},
+  author={Benjdira, Bilel and Ali, Anas M. and Boulila, Wadii and Koubaa, Anis},
   journal={Journal Name},
-  year={2024}
+  volume={},
+  number={},
+  pages={},
+  year={2025},
+  publisher={}
 }
+
 ```
 
 ## 🛠️ Requirements
